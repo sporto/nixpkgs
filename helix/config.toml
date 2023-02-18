@@ -1,0 +1,29 @@
+theme = "onedark"
+
+[editor]
+auto-completion = true
+color-modes = true
+rulers = [80]
+bufferline = "always"
+
+[editor.file-picker]
+hidden = false
+
+[editor.whitespace]
+render = "all"
+
+[keys.normal]
+# h = "insert_mode"
+# i = "move_line_up"
+# j = "move_char_left"
+# k = "move_line_down"
+
+C-s = ":w"
+# Move lines up or down
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+# [keys.select]
+# i = "extend_line_up"
+# j = "extend_char_left"
+# k = "extend_line_down"

@@ -33,10 +33,6 @@
     includes = [{ path = "~/.config/nixpkgs/gitconfig"; }];
   };
 
-  programs.helix = {
-    enable = true;
-  };
-
   programs.mcfly = {
     enable = true;
   };
@@ -49,14 +45,14 @@
     enable = true;
   };
 
-  programs.zellij = {
-    enable = true;
-  };
-
   programs.zsh = {
     enable = true;
     initExtra = builtins.readFile ./zshrc;
   };
 
-  imports = [ ./alacritty/alacritty.nix ];
+  imports = [
+    ./alacritty/alacritty.nix
+    ./helix/helix.nix
+    ./zellij/zellij.nix
+  ];
 }
