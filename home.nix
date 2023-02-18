@@ -5,13 +5,11 @@
   programs.home-manager.enable = true;
 
   home.packages = [
-    pkgs.sl
     pkgs.bashInteractive
+    pkgs.chezmoi
+    pkgs.just
+    pkgs.sl
   ];
-
-  # programs.chezmoi = {
-  #   enable = true;
-  # };
 
   programs.direnv = {
     enable = true;
