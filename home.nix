@@ -6,18 +6,9 @@
 
   home.packages = [
     pkgs.bashInteractive
-    pkgs.chezmoi
     pkgs.just
     pkgs.sl
   ];
-
-  # programs.alacritty = {
-  #   enable = true;
-  #   settings = {
-  #     font.size = 13;
-  #     shell.program = "zsh";
-  #   };
-  # };
 
   programs.direnv = {
     enable = true;
