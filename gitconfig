@@ -1,0 +1,19 @@
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /Users/Sebastian/.gitignore_global
+[user]
+	email = s@porto5.com
+	name = Sebastian Porto
+	signingkey = 9CD0653BDBFDBABD
+[pull]
+	ff = only
+[commit]
+	gpsign = true
+	gpgsign = false
+[gpg]
+	program = gpg1
