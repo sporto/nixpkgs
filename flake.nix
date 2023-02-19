@@ -9,16 +9,25 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }: let
-    arch = "x86_64-darwin"; # or aarch64-darwin
-  in {
-    defaultPackage.${arch} =
-      home-manager.defaultPackage.${arch};
+  outputs = { nixpkgs, home-manager, ... }:
+    let
+      withArch = arch:
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${arch};
+          modules = [ ./home.nix ];
+        };
+    in {
+      defaultPackage = {
+        aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
+        aarch64-linux = home-manager.defaultPackage.aarch64-linux;
+        x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
+        x86_64-linux = home-manager.defaultPackage.x86_64-linux;
+      };
 
-    homeConfigurations.Sebastian =
-      home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${arch};
-        modules = [ ./home.nix ];
+      homeConfigurations = {
+        "sebastian@aaaa" = withArch "aarch64-darwin";
+        "sebastian@bbbb" = withArch "x86_64-darwin";
+        "sebastian@pop-os" = withArch "x86_64-linux";
       };
     };
 }

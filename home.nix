@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   home.username = "Sebastian";
-  home.homeDirectory = "/Users/Sebastian";
+  home.homeDirectory =
+    "/${if pkgs.stdenv.isDarwin then "Users" else "home"}/Sebastian";
   home.stateVersion = "22.11";
   programs.home-manager.enable = true;
 
