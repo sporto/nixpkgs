@@ -1,7 +1,7 @@
 { pkgs, ... }: {
-  home.username = "Sebastian";
+  home.username = "sebastian";
   home.homeDirectory =
-    "/${if pkgs.stdenv.isDarwin then "Users" else "home"}/Sebastian";
+    "/${if pkgs.stdenv.isDarwin then "Users" else "home"}/sebastian";
   home.stateVersion = "22.11";
   programs.home-manager.enable = true;
 
@@ -23,6 +23,10 @@
   programs.git = {
     enable = true;
     includes = [{ path = "~/.config/nixpkgs/gitconfig"; }];
+  };
+
+  programs.gpg = {
+    enable = true;
   };
 
   programs.mcfly = {
