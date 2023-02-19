@@ -39,6 +39,7 @@
   programs.zsh = {
     enable = true;
     initExtra = builtins.readFile ./zshrc;
+    enableAutosuggestions = true;
   };
 
   imports = [
