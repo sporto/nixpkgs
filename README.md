@@ -1,3 +1,5 @@
+# My home configuration (.dotfile) files via Nix Home Manager
+
 Clone this repository to `~/.config/nixpkgs`
 
 ## Enable Flakes
