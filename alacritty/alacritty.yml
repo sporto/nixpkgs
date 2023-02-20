@@ -421,10 +421,10 @@ font:
 #   - (Windows) powershell
 shell:
   program: zsh
-  args:
-    - -l
-    - -c
-    - zellij attach --index 0 || zellij
+  # args:
+  #   - -l
+  #   - -c
+  #   - zellij attach --index 0 || zellij
 
 # Startup directory
 #

@@ -2,7 +2,7 @@
 
 {
   home.packages = [
-    pkgs.alacritty
+    # pkgs.alacritty
   ];
   xdg.configFile."alacritty/alacritty.yml".text = ''
     ${builtins.readFile ./alacritty.yml}
