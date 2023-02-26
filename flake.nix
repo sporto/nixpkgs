@@ -25,7 +25,7 @@
       };
 
       homeConfigurations = {
-        "sebastian@SebastianMBPM1Stax.lan" = withArch "aarch64-darwin";
+        "sebastian@SebastianMBPM1Stax.local" = withArch "aarch64-darwin";
         "Sebastian@sebastianmbpintel.lan" = withArch "x86_64-darwin";
         "sebastian@pop-os" = withArch "x86_64-linux";
       };
