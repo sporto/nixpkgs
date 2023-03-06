@@ -25,7 +25,9 @@
       };
 
       homeConfigurations = {
-        "sebastian@SebastianMBPM1Stax.local" = withArch "aarch64-darwin";
+        # Mac M1
+        "sebastian@sebastianmbpm1stax.lan" = withArch "aarch64-darwin";
+        # Mac Intel
         "Sebastian@sebastianmbpintel.lan" = withArch "x86_64-darwin";
         "sebastian@pop-os" = withArch "x86_64-linux";
       };
