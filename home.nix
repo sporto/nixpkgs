@@ -52,6 +52,7 @@
   imports = [
     ./alacritty/alacritty.nix
     ./helix/helix.nix
+    ./sublime/sublime.nix
     ./zellij/zellij.nix
   ];
 }

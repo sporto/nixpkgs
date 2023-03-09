@@ -1,0 +1,96 @@
+[
+	{
+		"keys": ["shift+alt+1"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1]]
+		}
+	},
+	{
+		"keys": ["shift+alt+2"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.5, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+		}
+	},
+	{
+		"keys": ["shift+alt+3"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.33, 0.66, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]]
+		}
+	},
+	// Move
+	{ "keys": ["home"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	{ "keys": ["end"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+	// Select
+	{ "keys": ["shift+home"], "command": "move_to", "args": {"to": "bol", "extend": true} },
+	{ "keys": ["shift+end"], "command": "move_to", "args": {"to": "eol", "extend": true} },
+	// Lines up / down
+	{ "keys": ["ctrl+up"], "command": "swap_line_up" },
+	{ "keys": ["ctrl+down"], "command": "swap_line_down" },
+	// Sort
+	{ "keys": ["ctrl+e"], "command": "sort_lines", "args": {"case_sensitive": false} },
+	{ "keys": ["super+e"], "command": "sort_lines", "args": {"case_sensitive": false} },
+	// Command Palette
+	{ "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+	{ "keys": ["super+i"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+	// Go to symbol
+	{ "keys": ["ctrl+y"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	{ "keys": ["super+y"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	// Open file
+	{ "keys": ["ctrl+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	// Go to project
+	{ "keys": ["ctrl+u"], "command": "prompt_select_workspace" },
+	{ "keys": ["super+u"], "command": "prompt_select_workspace" },
+	// Find
+	{ "keys": ["ctrl+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+	{ "keys": ["ctrl+shift+f"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+	// Find navigate
+	{ "keys": ["ctrl+r"], "command": "find_next" },
+	{ "keys": ["super+r"], "command": "find_next" },
+	{ "keys": ["ctrl+shift+r"], "command": "find_prev" },
+	{ "keys": ["super+shift+r"], "command": "find_prev" },
+	// Navigate Search results
+	{ "keys": ["ctrl+t"], "command": "next_result" },
+	{ "keys": ["super+t"], "command": "next_result" },
+	{ "keys": ["ctrl+shift+t"], "command": "prev_result" },
+	{ "keys": ["super+shift+t"], "command": "prev_result" },
+	// Find expand
+	{ "keys": ["super+d"], "command": "find_under_expand" },
+	{ "keys": ["ctrl+d"], "command": "find_under_expand" },
+	// Duplicate lines
+	{ "keys": ["super+shift+d"], "command": "duplicate_line" },
+	{ "keys": ["ctrl+shift+d"], "command": "duplicate_line" },
+	// Delete line
+	{ "keys": ["ctrl+shift+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["super+shift+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	// Comments
+	{ "keys": ["ctrl+forward_slash"], "command": "toggle_comment", "args": { "block": false } },
+	// Origami
+	{ "keys": ["ctrl+k", "up"], "command": "travel_to_pane", "args": {"direction": "up"} },
+  	{ "keys": ["ctrl+k", "right"], "command": "travel_to_pane", "args": {"direction": "right"} },
+  	{ "keys": ["ctrl+k", "down"], "command": "travel_to_pane", "args": {"direction": "down"} },
+  	{ "keys": ["ctrl+k", "left"], "command": "travel_to_pane", "args": {"direction": "left"} },
+	
+	{ "keys": ["ctrl+k", "shift+up"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
+	{ "keys": ["ctrl+k", "shift+right"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
+	{ "keys": ["ctrl+k", "shift+down"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
+	{ "keys": ["ctrl+k", "shift+left"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
+
+	{ "keys": ["ctrl+k", "alt+up"], "command": "clone_file_to_pane", "args": {"direction": "up"} },
+	{ "keys": ["ctrl+k", "alt+right"], "command": "clone_file_to_pane", "args": {"direction": "right"} },
+	{ "keys": ["ctrl+k", "alt+down"], "command": "clone_file_to_pane", "args": {"direction": "down"} },
+  	{ "keys": ["ctrl+k", "alt+left"], "command": "clone_file_to_pane", "args": {"direction": "left"} },
+
+
+]
