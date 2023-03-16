@@ -39,7 +39,9 @@
 	{ "keys": ["super+l"], "command": "expand_selection", "args": {"to": "line"} },
 	// Lines up / down
 	{ "keys": ["ctrl+up"], "command": "swap_line_up" },
+	{ "keys": ["super+up"], "command": "swap_line_up" },
 	{ "keys": ["ctrl+down"], "command": "swap_line_down" },
+	{ "keys": ["super+down"], "command": "swap_line_down" },
 	// Sort
 	{ "keys": ["ctrl+e"], "command": "sort_lines", "args": {"case_sensitive": false} },
 	{ "keys": ["super+e"], "command": "sort_lines", "args": {"case_sensitive": false} },
