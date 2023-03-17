@@ -49,29 +49,41 @@
 	{ "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
 	{ "keys": ["super+i"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
 	// Go to symbol
-	{ "keys": ["ctrl+y"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
-	{ "keys": ["super+y"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	{ "keys": ["ctrl+u"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	{ "keys": ["super+u"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	// Go to line
+	{ "keys": ["ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+	{ "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 	// Open file
 	{ "keys": ["ctrl+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["super+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
 	// Go to project
-	{ "keys": ["ctrl+u"], "command": "prompt_select_workspace" },
-	{ "keys": ["super+u"], "command": "prompt_select_workspace" },
-	// Find
+	{ "keys": ["ctrl+y"], "command": "prompt_select_workspace" },
+	{ "keys": ["super+y"], "command": "prompt_select_workspace" },
+	// FIND
+	// Find in current file
 	{ "keys": ["ctrl+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
-	{ "keys": ["ctrl+shift+f"], "command": "show_panel", "args": {"panel": "find_in_files"} },
-	// Find navigate
-	{ "keys": ["ctrl+r"], "command": "find_next" },
-	{ "keys": ["super+r"], "command": "find_next" },
-	{ "keys": ["ctrl+shift+r"], "command": "find_prev" },
-	{ "keys": ["super+shift+r"], "command": "find_prev" },
 	// Find and replace
-	{ "keys": ["ctrl+j"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
-	{ "keys": ["super+j"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
-	// Navigate Search results
-	{ "keys": ["ctrl+t"], "command": "next_result" },
-	{ "keys": ["super+t"], "command": "next_result" },
-	{ "keys": ["ctrl+shift+t"], "command": "prev_result" },
-	{ "keys": ["super+shift+t"], "command": "prev_result" },
+	{ "keys": ["ctrl+h"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+	{ "keys": ["super+h"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+	// Find in project
+	{ "keys": ["ctrl+;"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+	{ "keys": ["super+;"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+	// Navigate Search results in project
+	{ "keys": ["ctrl+."], "command": "next_result" },
+	{ "keys": ["super+."], "command": "next_result" },
+	{ "keys": ["ctrl+shift+."], "command": "prev_result" },
+	{ "keys": ["super+shift+."], "command": "prev_result" },
+	// Quick find
+	{ "keys": ["ctrl+m"], "command": "find_under" },
+	{ "keys": ["super+m"], "command": "find_under" },
+	{ "keys": ["ctrl+shift+m"], "command": "find_under_prev" },
+	{ "keys": ["super+shift+m"], "command": "find_under_prev" },
+	// Find navigate
+	{ "keys": ["ctrl+,"], "command": "find_next" },
+	{ "keys": ["super+,"], "command": "find_next" },
+	{ "keys": ["ctrl+shift+,"], "command": "find_prev" },
+	{ "keys": ["super+shift+,"], "command": "find_prev" },
 	// Find expand
 	{ "keys": ["super+d"], "command": "find_under_expand" },
 	{ "keys": ["ctrl+d"], "command": "find_under_expand" },
