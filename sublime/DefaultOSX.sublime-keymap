@@ -114,7 +114,10 @@
 	{ "keys": ["ctrl+k", "alt+up"], "command": "clone_file_to_pane", "args": {"direction": "up"} },
 	{ "keys": ["ctrl+k", "alt+right"], "command": "clone_file_to_pane", "args": {"direction": "right"} },
 	{ "keys": ["ctrl+k", "alt+down"], "command": "clone_file_to_pane", "args": {"direction": "down"} },
-  	{ "keys": ["ctrl+k", "alt+left"], "command": "clone_file_to_pane", "args": {"direction": "left"} },
+	{ "keys": ["ctrl+k", "alt+left"], "command": "clone_file_to_pane", "args": {"direction": "left"} },
 
+	// Save all
+	{ "keys": ["super+shift+s"], "command": "save_all" },
+	{ "keys": ["ctrl+shift+s"], "command": "save_all" },
 
 ]
