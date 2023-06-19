@@ -85,8 +85,10 @@
 	{ "keys": ["ctrl+shift+m"], "command": "find_under_prev" },
 	{ "keys": ["super+shift+m"], "command": "find_under_prev" },
 	// Find navigate
-	{ "keys": ["ctrl+,"], "command": "find_next" },
-	{ "keys": ["super+,"], "command": "find_next" },
+	{ "keys": ["ctrl+."], "command": "find_next" },
+	{ "keys": ["super+."], "command": "find_next" },
+	{ "keys": ["ctrl+,"], "command": "find_prev" },
+	{ "keys": ["super+,"], "command": "find_prev" },
 	{ "keys": ["ctrl+shift+,"], "command": "find_prev" },
 	{ "keys": ["super+shift+,"], "command": "find_prev" },
 	// Find expand
