@@ -1,6 +1,12 @@
 # My home configuration (.dotfile) files via Nix Home Manager
 
-Clone this repository to `~/.config/nixpkgs`
+Clone this repository to `~/.config/home-manager`
+
+## Install nix
+
+```
+make reinstall
+```
 
 ## Enable Flakes
 
@@ -13,7 +19,6 @@ In `~/.config/nix/nix.conf` add
 ```
 experimental-features = nix-command flakes
 ```
-
 
 ## Restart the daemon
 
