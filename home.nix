@@ -1,8 +1,15 @@
 { pkgs, ... }: {
-  home.username = "sebastian";
+  home.username =
+    "Sebastian";
+    # builtins.getEnv "USER";
 
   home.homeDirectory =
-    "/${if pkgs.stdenv.isDarwin then "Users" else "home"}/sebastian";
+    # builtins.getEnv "HOME";
+    # "/${if pkgs.stdenv.isDarwin then "Users" else "home"}/${builtins.getEnv "USER"}";
+    if pkgs.stdenv.isDarwin then
+      "/Users/Sebastian"
+    else
+      "/home/Sebastian";
 
   home.stateVersion = "22.11";
 
