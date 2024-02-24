@@ -11,10 +11,13 @@
 
   outputs = { nixpkgs, home-manager, ... }:
     let
-      withArch = arch:
+      withArch = user: arch:
         home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${arch};
           modules = [ ./home.nix ];
+          extraSpecialArgs = {
+            user = user;
+          };
         };
     in {
       defaultPackage = {
@@ -24,12 +27,14 @@
         x86_64-linux = home-manager.defaultPackage.x86_64-linux;
       };
 
+      # terminal: hostname
       homeConfigurations = {
         # Mac M1
-        "sebastian@sebastianmbpm1stax.lan" = withArch "aarch64-darwin";
+        "sebastian@sebastianmbpm1stax.lan" = withArch "sebastian" "aarch64-darwin";
         # Mac Intel
-        "Sebastian@sebastianmbpintel.lan" = withArch "x86_64-darwin";
-        "sebastian@pop-os" = withArch "x86_64-linux";
+        "Sebastian@sebastianmbpintel.lan" = withArch "sebastian" "x86_64-darwin";
+        "sebastian@sebastianmbp2017.lan" = withArch "sebastian" "x86_64-darwin";
+        "sebastian@pop-os" = withArch "sebastian" "x86_64-linux";
       };
     };
 }
